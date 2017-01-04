@@ -5,18 +5,13 @@
     - content-type
   headerValues:
     fusion-api-key:
-      - key
+      - fusionqateam
       - key
       - key
     content-type:
       - application/json
   db:
-    elitecareer_usa:
+    bdName:
       host: localhost
       username: username
       password: password
-    elitecareer_list:
-      host: localhost
-      username: username
-      password: password
-

@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 const templateProcessor = require('../../lib/templateProcessor');
 
-
 module.exports = yeoman.extend({
   constructor: function constructor() {
     yeoman.apply(this, arguments);
@@ -31,7 +30,7 @@ module.exports = yeoman.extend({
       {
         type: 'confirm',
         name: 'dummyEndpoint',
-        message: 'would you like to start an endpoint?',
+        message: 'would you like to create an endpoint?',
         default: false
       }
     ];
@@ -46,7 +45,6 @@ module.exports = yeoman.extend({
       let done = this.async();
       let sourceRoot = this.sourceRoot();
       let destinationRoot = this.destinationRoot();
-      this.log(this.context);
       this.log('app writing');
 
       templateProcessor.processTemplates(this,
@@ -58,10 +56,6 @@ module.exports = yeoman.extend({
         this.composeWith('elitecareer-api:endpoint', {});
       }
     }
-  },
-
-  install: function install() {
-    this.log('install');
   },
 
   end: function end() {

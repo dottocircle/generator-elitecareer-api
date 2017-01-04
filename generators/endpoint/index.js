@@ -28,13 +28,11 @@ module.exports = yeoman.extend({
       let self = this;
       let done = self.async();
 
-      self.log('in endpoint generator writing');
-
       let sourceRoot = self.sourceRoot();
       let destinationRoot = self.destinationRoot();
 
       if (self.context.endpoint) {
-        self.log(`generating ${self.context.endpoint}`);
+        self.log(`generating '${self.context.endpoint}' endpoint`);
         let context = { endpointname: self.context.endpoint };
 
         templateProcessor

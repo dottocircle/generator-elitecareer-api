@@ -4,6 +4,6 @@ require_once 'App.php';
 
 function routers() {
 
-	App::get('/<%= endpointname %>', '<%= endpointname %>');
+  App::get('/<%= endpointname %>', '<%= endpointname %>');
 
 }
