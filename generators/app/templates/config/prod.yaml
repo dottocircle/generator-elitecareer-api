@@ -1,0 +1,22 @@
+---
+  requiredHeaders:
+    - fusion-api-key
+    - authorization
+    - content-type
+  headerValues:
+    fusion-api-key:
+      - fusionqateam
+      - fusionbd
+      - fusionusa
+    content-type:
+      - application/json
+  db:
+    elitecareer_usa:
+      host: localhost
+      username: elitecareer_usa
+      password: As365827@
+    elitecareer_list:
+      host: localhost
+      username: elitecareer_list
+      password: As365827@
+

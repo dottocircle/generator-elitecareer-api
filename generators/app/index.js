@@ -51,6 +51,12 @@ module.exports = yeoman.extend({
 
       templateProcessor.processTemplates(this,
         sourceRoot, destinationRoot, this.context, done);
+    },
+
+    endpoints: function endpoints() {
+      if (this.context.dummyEndpoint) {
+        this.composeWith('elitecareer-api:endpoint', {});
+      }
     }
   },
 
