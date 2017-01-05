@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule api/v1/(.*)$ src/router.php?request=$1 [QSA,NC,L]
+RewriteRule api/v1/$ index.html [QSA,NC,L]
+RewriteRule api/$ index.html [QSA,NC,L]
+</IfModule>
+
+# ---- prevent directory listings -----
+
+IndexIgnore *

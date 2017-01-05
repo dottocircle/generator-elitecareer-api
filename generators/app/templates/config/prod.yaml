@@ -1,0 +1,17 @@
+---
+  requiredHeaders:
+    - fusion-api-key
+    - authorization
+    - content-type
+  headerValues:
+    fusion-api-key:
+      - fusionqateam
+      - key
+      - key
+    content-type:
+      - application/json
+  db:
+    bdName:
+      host: localhost
+      username: username
+      password: password
