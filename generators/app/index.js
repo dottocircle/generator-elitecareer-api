@@ -17,15 +17,15 @@ module.exports = yeoman.extend({
       `welcome to ${chalk.red('EliteCareerApi')} generator!`
     ));
 
-    let appName = this.appname.split(' ');
-    appName = appName.join('.');
+    // let appName = this.appname.split(' ');
+    // appName = appName.join('.');
 
     let prompts = [
       {
         type: 'input',
         name: 'packageName',
         message: 'what is your app name?',
-        default: appName
+        default: 'apiname.qa.elitecareer.net'
       },
       {
         type: 'confirm',

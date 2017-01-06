@@ -4,7 +4,7 @@
   "description": "Yeoman generator for EliteCareer API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "lint": "eslint ."
   },
   "keywords": [
@@ -25,6 +25,9 @@
   "devDependencies": {
     "eslint": "^3.12.2",
     "eslint-config-airbnb": "^13.0.0",
-    "eslint-config-xo-space": "^0.15.0"
+    "eslint-config-xo-space": "^0.15.0",
+    "mocha": "^3.2.0",
+    "yeoman-assert": "^2.2.2",
+    "yeoman-test": "^1.6.0"
   }
 }

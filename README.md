@@ -1,4 +1,6 @@
 # generator-elitecareer-api
+## What is this?
+generator-elitecareer-api is a PHP Rest API generator. It is designed to create new PHP Rest API, having complete configuration.
 
 ## Development
 
@@ -27,7 +29,7 @@
   yo elitecareer-api
   ```
 
-3. You will be prompted for the project name again and option for creating endpoint.
+3. You will be prompted for the project name and option for creating endpoint.
 
 At this point you will have a working project with an endpoint if you selected that option. After you confirm that the project is runnable, remove configuration and other information that is not appropriate for your endpoints.
 
@@ -51,7 +53,7 @@ git to revert reset if you want.
   ```
   yo elitecareer-api
   ```
-3. You will be prompted again for your project name. Just enter the same as it was before.
+3. You will be prompted again for your project name. Just enter the same name as it was before.
 
 4. You can choose to overwrite all files and view the git diff or pick and choose
 which files to overwrite.
