@@ -5,19 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec --ui bdd && npm run lint",
-    "lint": "./node_modules/.bin/eslint . && ./node_modules/.bin/jscs ."
+    "lint": "eslint . && ./node_modules/.bin/jscs ."
   },
   "keywords": [
     "yeoman-generator"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mkhan004/generator-elitecareer-api.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mkhan004/generator-elitecareer-api/issues"
-  },
-  "homepage": "https://github.com/mkhan004/generator-elitecareer-api#readme",
   "author": "Shakil Khan",
   "license": "ISC",
   "files": [
@@ -39,5 +31,16 @@
     "mocha": "^3.2.0",
     "yeoman-assert": "^2.2.2",
     "yeoman-test": "^1.6.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkhan004/generator-elitecareer-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkhan004/generator-elitecareer-api/issues"
+  },
+  "homepage": "https://github.com/mkhan004/generator-elitecareer-api#readme"
 }
