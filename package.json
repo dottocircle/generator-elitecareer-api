@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mkhan004/generator-elitecareer-api"
+    "url": "git+https://github.com/mkhan004/generator-elitecareer-api.git"
   },
   "bugs": {
     "url": "https://github.com/mkhan004/generator-elitecareer-api/issues"
