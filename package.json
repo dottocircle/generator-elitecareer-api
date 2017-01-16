@@ -1,15 +1,23 @@
 {
   "name": "generator-elitecareer-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Yeoman generator for EliteCareer API",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "lint": "eslint ."
+    "test": "mocha --reporter spec --ui bdd && npm run lint",
+    "lint": "./node_modules/.bin/eslint . && ./node_modules/.bin/jscs ."
   },
   "keywords": [
     "yeoman-generator"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkhan004/generator-elitecareer-api"
+  },
+  "bugs": {
+    "url": "https://github.com/mkhan004/generator-elitecareer-api/issues"
+  },
+  "homepage": "https://github.com/mkhan004/generator-elitecareer-api#readme",
   "author": "Shakil Khan",
   "license": "ISC",
   "files": [
@@ -25,8 +33,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.12.2",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-config-xo-space": "^0.15.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.9.2",
+    "jscs": "^3.0.3",
     "mocha": "^3.2.0",
     "yeoman-assert": "^2.2.2",
     "yeoman-test": "^1.6.0"
