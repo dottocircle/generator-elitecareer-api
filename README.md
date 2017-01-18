@@ -1,6 +1,6 @@
 [![Build Status](https://secure.travis-ci.org/mkhan004/generator-elitecareer-api.svg)](http://travis-ci.org/mkhan004/generator-elitecareer-api)
 
-[![NPM](https://nodei.co/npm/generator-elitecareer-api.png)](https://nodei.co/npm/generator-elitecareer-api/)
+[![NPM](https://nodei.co/npm/generator-elitecareer-api.png?downloads=true)](https://nodei.co/npm/generator-elitecareer-api/)
 
 [![Package Quality](http://npm.packagequality.com/badge/generator-elitecareer-api.png)](http://packagequality.com/#?package=generator-elitecareer-api)
 
