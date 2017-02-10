@@ -1,3 +1,9 @@
+[![Build Status](https://secure.travis-ci.org/mkhan004/generator-elitecareer-api.svg)](http://travis-ci.org/mkhan004/generator-elitecareer-api)
+
+[![NPM](https://nodei.co/npm/generator-elitecareer-api.png?downloads=true)](https://nodei.co/npm/generator-elitecareer-api/)
+
+[![Package Quality](http://npm.packagequality.com/badge/generator-elitecareer-api.png)](http://packagequality.com/#?package=generator-elitecareer-api)
+
 # generator-elitecareer-api
 ## What is this?
 generator-elitecareer-api is a PHP Rest API generator. It is designed to create new PHP Rest API, having complete configuration.
