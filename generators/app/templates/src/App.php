@@ -3,7 +3,7 @@
 require_once 'lib/Validator.php';
 require_once 'lib/ErrorHandler.php';
 require_once 'lib/Spyc.php';
-error_reporting(E_ALL);
+// error_reporting(E_ALL);
 // ini_set("display_errors", 1);
 
 class App {
@@ -51,7 +51,6 @@ class App {
   }
 
   static function send($endpoint) {
-    App::getResource($endpoint);
     $method_names = get_class_methods($endpoint.'Controller');
     ErrorHandler::setResponseHeaders(200);
     return json_encode(call_user_func(array($endpoint.'Controller', self::$appArgs['resource']), self::$args));
@@ -100,6 +99,7 @@ class App {
     // initial check for direct endpoint match
     foreach (self::$resourceArray as $key => $value) {
       $fullPath = implode('/', $path);
+
       if ($key == '/'.$fullPath) {
         self::$currentResourceKey = $key;
         $methodIndex = array_search(self::$args['method'], self::$resourceArray[$key]['method']);
@@ -115,29 +115,31 @@ class App {
 
     $exist = false;
     foreach (self::$resourceArray as $key => $value) {
-      if (strpos($key, $path[0]) !== false) {
-        if ($key[0] === '/') {
-          $key = substr( $key, 1 );
-        }
-
-        $parts = explode('/', $key);
-        $change = 0;
-        $exist = false;
-        foreach ($parts as $node => $val) {
-          if (!(strpos($val, ':') !== false)) {
-            if ($parts[$change] == $path[$change]) {
-              $exist = true;
-            } else {
-              $exist = false;
-            }
+      if(count($path) === count(explode('/', ltrim($key, '/')))) {
+        if (strpos($key, $path[0]) !== false) {
+          if ($key[0] === '/') {
+            $key = substr( $key, 1 );
           }
-          $change++;
-        }
 
-        $resourceKey = $key;
+          $parts = explode('/', $key);
+          $change = 0;
+          $exist = false;
+          foreach ($parts as $node => $val) {
+            if (!(strpos($val, ':') !== false)) {
+              if ($parts[$change] == $path[$change]) {
+                $exist = true;
+              } else {
+                $exist = false;
+              }
+            }
+            $change++;
+          }
 
-        if ($exist) {
-          break;
+          $resourceKey = $key;
+
+          if ($exist) {
+            break;
+          }
         }
       }
     }

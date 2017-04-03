@@ -4,17 +4,17 @@ require_once 'App.php';
 class Validator {
 
 	static function validate() {
+		$missingHeaders = Validator::validateRequiredHeaders();
+		if (sizeof($missingHeaders) > 0) {
+			return 'missingHeader';
+		}
+
 		if (!Validator::validateEndpoints()) {
 			return 'invalidEndpoint';
 		}
 
 		if (!Validator::validateMethods()) {
 			return 'invalidMethod';
-		}
-
-		$missingHeaders = Validator::validateRequiredHeaders();
-		if (sizeof($missingHeaders) > 0) {
-			return 'missingHeader';
 		}
 
 		$headerValues = Validator::validateHeaderValues();
