@@ -86,6 +86,16 @@ class App {
     self::$methodCount++;
   }
 
+  static function delete($endpoint, $resource) {
+    if (self::$currentEndpoint !== $endpoint) {
+      self::$currentEndpoint = $endpoint;
+      self::$methodCount = 0;
+    }
+    self::$resourceArray[$endpoint]['resource'][self::$methodCount] = $resource;
+    self::$resourceArray[$endpoint]['method'][self::$methodCount] = 'DELETE';
+    self::$methodCount++;
+  }
+
   public static function getResource($endpoint) {
     if (file_exists("controllers/{$endpoint}/index.php")) {
       require_once "controllers/{$endpoint}/index.php";
