@@ -34,7 +34,7 @@ php composer.phar test
 ```
 App::HTTP_Method('/yourEndpoint', 'resourceServingMethodName');
 ```
-<b>Note: </b> you have to define `resourceServingMethodName` within `controllers/dummy/dummyController.php`. You can access every single detail about any request just specifying `$appArgs` argument within `resourceServingMethodName` method. With `resourceServingMethodName` method you must have to return an Array, which will contain final response for that given `Endpoint`.
+<b>Note: </b> you have to define `resourceServing` method within `controllers/dummy/dummyController.php`. You can access every single detail about any request just specifying `$appArgs` argument within `resourceServing` method. With `resourceServing` method you must have to return an Array, which will contain final response for that given `Endpoint`.
 ```
 public function dummy($appArgs) {
   $sampleData = array();
@@ -118,7 +118,7 @@ App::delete('/dummy', 'dummyDelete');
 ```
 
 # How to specify response code?
-Just add ```ErrorHandler::setResponseHeaders(yourStatusCode);``` within `resourceServingMethodName` body.
+Just add `ErrorHandler::setResponseHeaders(yourStatusCode);` within `resourceServing` method body.
 
 ## What are currently supported Status Code?
 ```
