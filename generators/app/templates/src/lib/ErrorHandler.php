@@ -5,6 +5,7 @@ require_once 'Validator.php';
 class ErrorHandler {
 
 	static function setResponseHeaders($status){
+		header("Access-Control-Allow-Origin: *");
 		header('Content-Type: application/json');
 		header('Accept: application/json');
 		ErrorHandler::setStatusCode($status);
@@ -33,6 +34,8 @@ class ErrorHandler {
 			case 500:
 				header("HTTP/1.1 {$status} Internal Server Error");
 				break;
+			default:
+				header("HTTP/1.1 {$status} Internal Server Error");
 		}
 	}
 
